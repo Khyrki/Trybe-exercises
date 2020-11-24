@@ -1,4 +1,4 @@
-* No dia de hoje aprendemos sobre HTML semantico e como estruturar uma pagina.
+No dia de hoje aprendemos sobre HTML semantico e como estruturar uma pagina.
 
 HEADER
 	-Usamos para definir um cabeçalho e grupos de titulos
