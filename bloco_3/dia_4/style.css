@@ -1,9 +1,7 @@
 
 #barraDeNavegação{
- background-color: rgb(138, 249, 253);
  height: 50px;
  font-size: 18px;
- background-size: cover;
  
 }
 .navegacao{
@@ -17,4 +15,17 @@
     
     ;
  
+}
+td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+}
+#article1{
+    width: 50%;
+    display: inline-block;
+}
+#tabela1{
+    margin-top: ;
+    float:right;
 }
