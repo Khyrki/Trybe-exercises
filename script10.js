@@ -1,6 +1,5 @@
 let a = 25;
 let b = 40;
-
 let imposto = a * 0.2;
 let valorCustoTotal = a + imposto;
 
