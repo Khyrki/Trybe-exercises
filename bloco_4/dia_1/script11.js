@@ -9,7 +9,7 @@ if (salario <= 1556.94) {
     liquidoINSS *= 0.89;
 } else {
     liquidoINSS -= 570.88; 
-}
+};
 
 let liquidoIR = liquidoINSS;
 let impostoIR;
@@ -26,6 +26,6 @@ if (liquidoIR >= 1903.99 && liquidoIR <= 2826.65) {
 } else if (liquidoIR > 4664.68) {
     impostoIR = ((liquidoIR * 0.275) - 869.36);
     liquidoIR -= impostoIR;
-} else {};
+};
 
-console.log ('O salario liquido é: ',liquidoIR)
+console.log ('O salario liquido é: ',liquidoIR) ;
