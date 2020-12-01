@@ -8,4 +8,4 @@ function indiceDoMaiorValorDeUmArray(array) {
   }
   return array.indexOf(menor);
 }
-console.log(indiceDoMaiorValorDeUmArray([100, 10, 52, 7, 1, 5010]));
+console.log(indiceDoMaiorValorDeUmArray([2, 4, 6, 7, 10, 0, -3]));
