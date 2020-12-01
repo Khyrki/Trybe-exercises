@@ -4,9 +4,9 @@ function indiceDoMaiorValorDeUmArray(array) {
 
   for (index = 0; index < array.length; index += 1) {
     if (array[index] > maior) {
-      maior = index;
+      maior = array[index];
     }
   }
-  return maior;
+  return array.indexOf(maior);
 }
-console.log(indiceDoMaiorValorDeUmArray([2, 3, 6, 7, 10, 1]);
+console.log(indiceDoMaiorValorDeUmArray([1, 10, 52, 7, 1, 5010]));
