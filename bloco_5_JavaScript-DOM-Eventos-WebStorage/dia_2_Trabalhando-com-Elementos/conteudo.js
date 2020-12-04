@@ -30,4 +30,17 @@ let requisito10 = document.createElement('div');
 requisito10.innerText = 'requisito 10'
 requisito5.appendChild(requisito10);
 
+/*let primeiroFilhoDoFilho = document.getElementById('primeiroFilhoDoFilho');
+ 
+//let quartoFilho = document.getElementById('quartoEUltimoFilho');
+//requisito8.removeChild(quartoFilho);
 
+let bodyy = document.getElementById('bodyy');
+let paidopai = document.getElementById('paiDoPai')
+bodyy.removeChild(paidopai)
+
+bodyy.appendChild(paidopai.children[0])
+bodyy.appendChild(requisito4.children[1])
+*/
+
+for (let index = 0; index < )
