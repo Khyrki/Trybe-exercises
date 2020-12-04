@@ -19,5 +19,15 @@ let requisito7 = document.getElementById('elementoOndeVoceEsta');
 requisito7.nextElementSibling;
 
 let requisito8 = document.getElementById('pai');
-console.log(requisito8.children[2]);
+requisito8.children[2];
+
+let requisito9 = document.createElement('div');
+requisito9.innerText = "requisito 9";
+requisito9.style.backgroundColor = 'black';
+requisito4.appendChild(requisito9);
+
+let requisito10 = document.createElement('div');
+requisito10.innerText = 'requisito 10'
+requisito5.appendChild(requisito10);
+
 
