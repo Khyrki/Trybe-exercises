@@ -34,9 +34,9 @@ for (let index = 0; index < dia.length; index += 1) {
  }
 }
 
-function criaBotao(feriado) {
+function holidayButton(feriado) {
   let buttonsContainer = document.querySelector('.buttons-container');
-  let criaElementoButton = document.createElement('botton');
+  let criaElementoButton = document.createElement('button');
   
   criaElementoButton.id = 'btn-holiday'
   criaElementoButton.innerText = 'Feriado'
@@ -44,8 +44,28 @@ function criaBotao(feriado) {
 
 };
 
-criaBotao();
+holidayButton();
 
-console.log (document.getElementsByClassName('buttons-container'));
+function adicionaAoBotaoFeriadoClickEvent() {
+  let holiday = document.querySelectorAll('.holiday');
+  let button = document.querySelector('#btn-holiday');
+  let backColor = 'rgb(238,238,238)';
+  let myColorPadrao = 'lightgreen';
+
+  button.addEventListener('click', function() {
+    for (let index = 0; index < holiday.length; index += 1) {
+      if (holiday[index].style.backgroundColor === myColorPadrao) {
+        holiday[index].style.backgroundColor = backColor;
+      } else {
+        holiday[index].style.backgroundColor = myColorPadrao;
+      }
+    }
+  })
+};
+adicionaAoBotaoFeriadoClickEvent()
+
+console.log (document.querySelectorAll('.holiday'));
+
+
 
 
