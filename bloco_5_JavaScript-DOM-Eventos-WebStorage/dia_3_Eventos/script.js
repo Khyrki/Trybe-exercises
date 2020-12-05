@@ -23,7 +23,6 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
   daysOfWeek.appendChild(li);
 }
 
-//let dias = document.querySelector('#days');
 let dia = daysOfWeek.children;
 for (let index = 0; index < dia.length; index += 1) {
  if (dia[index].innerText === '24' || dia[index].innerText === '25' || dia[index].innerText === '31') {
@@ -35,5 +34,18 @@ for (let index = 0; index < dia.length; index += 1) {
  }
 }
 
+function criaBotao(feriado) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let criaElementoButton = document.createElement('botton');
+  
+  criaElementoButton.id = 'btn-holiday'
+  criaElementoButton.innerText = 'Feriado'
+  buttonsContainer.appendChild(criaElementoButton);
+
+};
+
+criaBotao();
+
+console.log (document.getElementsByClassName('buttons-container'));
 
 
