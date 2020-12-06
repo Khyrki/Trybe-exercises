@@ -25,14 +25,15 @@ for (let index = 0; index < dezDaysList.length; index += 1) {
 
 let dia = daysOfWeek.children;
 for (let index = 0; index < dia.length; index += 1) {
- if (dia[index].innerText === '24' || dia[index].innerText === '25' || dia[index].innerText === '31') {
+if (dia[index].innerText === '24' || dia[index].innerText === '25' || dia[index].innerText === '31') {
   dia[index].classList.add ('holiday');
- } 
+} 
 
- if (dia[index].innerText === '4' || dia[index].innerText === '11' || dia[index].innerText === '18' || dia[index].innerText === '25') {
+if (dia[index].innerText === '4' || dia[index].innerText === '11' || dia[index].innerText === '18' || dia[index].innerText === '25') {
   dia[index].classList.add ('friday');
- }
 }
+}
+
 
 function holidayButton(feriado) {
   let buttonsContainer = document.querySelector('.buttons-container');
@@ -64,7 +65,17 @@ function adicionaAoBotaoFeriadoClickEvent() {
 };
 adicionaAoBotaoFeriadoClickEvent()
 
-console.log (document.querySelectorAll('.holiday'));
+function criaBotaoSextaFeira(Sextafeira) {
+  let buttonsContainer = document.querySelector('.buttons-container');
+  let criaElementoButton = document.createElement('button');
+
+  buttonsContainer.appendChild(criaElementoButton);
+  criaElementoButton.id = 'btn-friday';
+  criaElementoButton.innerText = 'Sexta-Feira';
+
+
+};
+criaBotaoSextaFeira()
 
 
 
