@@ -67,15 +67,27 @@ adicionaAoBotaoFeriadoClickEvent()
 
 function criaBotaoSextaFeira(Sextafeira) {
   let buttonsContainer = document.querySelector('.buttons-container');
-  let criaElementoButton = document.createElement('button');
+  let criaElementoButton1 = document.createElement('button');
 
-  buttonsContainer.appendChild(criaElementoButton);
-  criaElementoButton.id = 'btn-friday';
-  criaElementoButton.innerText = 'Sexta-Feira';
-
-
+  buttonsContainer.appendChild(criaElementoButton1);
+  criaElementoButton1.id = 'btn-friday';
+  criaElementoButton1.innerText = 'Sexta-Feira';
+  
+  criaElementoButton1.addEventListener('click', function() {
+    let friday = document.querySelectorAll('.friday');
+    for (let index = 0; index < friday.length; index += 1) {
+      if (friday[index].innerText !== 'Sextou!!') {
+        friday[index].innerText = 'Sextou!!';
+      } else if (friday[index].innerText === 'Sextou!!') {
+        friday[index].innerText = friday[index].nextElementSibling.innerText - 1;
+      };
+    };
+    console.log (friday[index])
+  })
 };
 criaBotaoSextaFeira()
+
+console.log(document.querySelectorAll('.friday'))
 
 
 
