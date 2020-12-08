@@ -27,3 +27,28 @@ function changePageBackgroundColor () {
 }
 
 changePageBackgroundColor();
+
+function increaseTextSize() {
+  localStorage.getItem('tamanho')
+  document.body.style.fontSize = localStorage.getItem('tamanho');
+  let fontSize = parseInt(localStorage.getItem('tamanho').slice(0, -1));
+  let increase = 5;
+  const myButton = document.querySelector('#btn-incr-text-size')
+  let bodyStyle = document.body.style
+  myButton.addEventListener('click', () => {
+    localStorage.setItem('tamanho','')
+    fontSize += increase;
+    bodyStyle.fontSize = fontSize + '%';
+    localStorage.tamanho = bodyStyle.fontSize
+  })
+  const myButton2 = document.querySelector('#botao2')
+  let bodyStyle2 = document.body.style
+  myButton2.addEventListener('click', () => {
+    localStorage.setItem('tamanho','')
+    fontSize = fontSize - increase;
+    bodyStyle2.fontSize = fontSize + '%';
+    localStorage.tamanho = bodyStyle2.fontSize
+  })
+ 
+}
+increaseTextSize()
