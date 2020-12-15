@@ -5,3 +5,4 @@ document.getElementById('second-paragraph').innerText = 'Trybe é a melhor escol
 document.getElementById('subtitle').innerText = 'Dom e Seletores';
 
 document.getElementsByClassName('p1')
+
