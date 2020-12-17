@@ -82,8 +82,7 @@ function criaBotaoSextaFeira(Sextafeira) {
         friday[index].innerText = friday[index].nextElementSibling.innerText - 1;
       };
     };
-    console.log (friday[index])
-  })
+  });
 };
 criaBotaoSextaFeira()
 
