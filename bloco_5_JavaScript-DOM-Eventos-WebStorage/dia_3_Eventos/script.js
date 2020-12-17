@@ -34,7 +34,6 @@ if (dia[index].innerText === '4' || dia[index].innerText === '11' || dia[index].
 }
 }
 
-
 function holidayButton(feriado) {
   let buttonsContainer = document.querySelector('.buttons-container');
   let criaElementoButton = document.createElement('button');
@@ -87,7 +86,3 @@ function criaBotaoSextaFeira(Sextafeira) {
 criaBotaoSextaFeira()
 
 console.log(document.querySelectorAll('.friday'))
-
-
-
-
