@@ -1,23 +1,55 @@
 * {
   margin: 10px;
+  box-sizing: border-box;
 }
 
 body {
   font-size: 1.3rem;
   
 }
+
 h1 {
   font-size: 2rem;
 }
+
 h2 {
 
 }
 
 img {
-    max-width: 100%;
-    margin: 25px 0;
+  max-width: 100%;
+  margin: 25px 0;
 }
 
 figure {
-    margin: 0;
+  margin: 0;
+}
+
+/* 1024 break point*/
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-color:lightcoral;
+    font-size: 1.5rem;
+  }
+
+  figure {
+    display: inline-block;
+    width: 45%;
+    margin-left: 35px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  body {
+    background-color: lightblue;
+    font-size: 2rem;
+    max-width: 1130px;
+    margin: auto;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+
 }
