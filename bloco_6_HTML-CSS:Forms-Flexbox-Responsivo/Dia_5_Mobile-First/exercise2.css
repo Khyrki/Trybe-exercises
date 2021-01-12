@@ -6,8 +6,6 @@ p {
   padding: 20px;
 }
 
-/* TODO */
-
 @media screen and (max-width: 600px) {
   body {
     background-color: lightcoral;
@@ -21,8 +19,6 @@ p {
     padding: 0 5px;
     line-height: 1.5em;
   }
-
-  /* TODO */
 }
 
 @media screen and (min-width: 600px) {
@@ -33,8 +29,6 @@ p {
   .container {
     flex-wrap: wrap;
   }
-
-  /* TODO */
 }
 
 @media screen and (min-width: 1000px) {
@@ -45,6 +39,4 @@ p {
   .container {
     flex-wrap: nowrap;
   }
-
-  /* TODO */
 }
