@@ -18,9 +18,14 @@ const lesson3 = {
   turno: 'noite',
 };
 
-const turnoManha = (objeto, chave, valor) => {
+/*const turnoManha = (objeto, chave, valor) => {
   objeto[chave] = valor;
   return objeto;
 }
 
-console.log(turnoManha(lesson2, 'turno', 'manhã'));
+console.log(turnoManha(lesson2, 'turno', 'manhã')); */
+
+const keys = (objeto) => {
+  return Object.keys(objeto)
+};
+console.log(keys(lesson1));
