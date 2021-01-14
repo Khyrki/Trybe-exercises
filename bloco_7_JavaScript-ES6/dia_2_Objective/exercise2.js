@@ -23,9 +23,10 @@ const lesson3 = {
   return objeto;
 }
 
-console.log(turnoManha(lesson2, 'turno', 'manhã')); */
+console.log(turnoManha(lesson2, 'turno', 'manhã')); 
 
 const keys = (objeto) => {
   return Object.keys(objeto)
 };
-console.log(keys(lesson1));
+console.log(keys(lesson1)); */
+
