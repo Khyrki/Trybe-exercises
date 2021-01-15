@@ -1,7 +1,9 @@
+const assert = require('assert');
+
 const removeVowels = (word) => {
   const characters = word.split('');
-  const results = [];
-
+  let results = '';
+  let numeros = 1;
   for (let i = 0; i < characters.length; i += 1) {
     if (
       characters[i] === 'a' ||
@@ -10,9 +12,10 @@ const removeVowels = (word) => {
       characters[i] === 'e' ||
       characters[i] === 'u'
     ) {
-      results.push(characters[i]);
+      results += numeros;
+      numeros += 1;
     } else {
-      results.push('_');
+      results += characters[i];
     }
   }
   return results;
@@ -21,3 +24,5 @@ const removeVowels = (word) => {
 
 const parameter = 'Dayane';
 const result = 'D1y2n3';
+
+assert.deepStrictEqual(removeVowels(parameter), result);
