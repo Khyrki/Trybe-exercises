@@ -13,8 +13,7 @@ function flatten() {
   
   const newMatriz = arrays.reduce((accumulator, currentValue) => {
     return accumulator.concat(currentValue);
-  }, []);
+  });
   return newMatriz
 }
-
 assert.deepStrictEqual(flatten(), ["1", "2", "3", true, 4, 5, 6]);
