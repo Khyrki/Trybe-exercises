@@ -3,9 +3,9 @@ import React from 'react';
 class App extends React.Component {
   render() {
     const shoppingList = ['leite', 'arroz', 'feijão', 'banana', 'carne'];
-    const items = shoppingList.map((item) => {
+    const items = shoppingList.map((item, index) => {
       console.log("item: ", item);
-      return (<li>{ item }</li>);
+      return (<li key={ index }>{ item }</li>);
     });
 
     return (
