@@ -1,3 +1,4 @@
+use('erp');
 
 db.vendas.aggregate([
   {
@@ -16,9 +17,6 @@ db.vendas.aggregate([
     }
   },
   {
-    $unwind: "$dadosCliente"
-  },
-  {
     $group: {
       _id: "$dadosCliente.endereco.uf",
       totalVendas: {
@@ -31,12 +29,17 @@ db.vendas.aggregate([
       totalVendas: -1
     }
   },
-  { $limit: 3 },
+  { 
+    $limit: 3
+  },
   {
     $project: {
       _id: 0,
       uf: "$_id",
       totalVendas: 1
     }
-  }
+  },
+  {
+    $unwind: "$uf"
+  },
 ]);
