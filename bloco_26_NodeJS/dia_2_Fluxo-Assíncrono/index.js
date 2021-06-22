@@ -11,8 +11,10 @@ function promise(a, b, c) {
   })
 };
 
-promise(1, 2, 100)
+const param1 = Math.floor(Math.random() * 100 + 1);
+const param2 = Math.floor(Math.random() * 100 + 1);
+const param3 = Math.floor(Math.random() * 100 + 1);
+
+promise(param1, param2, param3)
   .then((resolve) => console.log(resolve))
   .catch((error) => console.error(error.message))
-
-
