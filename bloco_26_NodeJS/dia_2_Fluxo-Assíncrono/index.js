@@ -1,14 +1,15 @@
 function promise(a, b, c) {
-  const promise = new Promise((result, reject) => {
-    if (a !== Number && b !== Number && c !== Number) {
-      reject("Informe apenas números")
+  return new Promise((resolve, reject) => {
+    if (typeof a !== "number" || typeof b !== "number" || typeof c !== "number") {
+      return reject(new Error("Informe apenas números"))
     }
-
+    const resultado = (a + b) * c;
+    resolve(resultado);
   })
-  return promise;
 };
 
-promise(1, 2, '1')
-  .then((result) => console.log(result))
-  .catch((error) => console.error(error))
+promise(1, 2, "3")
+  .then((resolve) => console.log(resolve))
+  .catch((error) => console.error(error.message))
+
 
