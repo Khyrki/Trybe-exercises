@@ -16,14 +16,4 @@ const param1 = Math.floor(Math.random() * 100 + 1);
 const param2 = Math.floor(Math.random() * 100 + 1);
 const param3 = Math.floor(Math.random() * 100 + 1);
 
-
-async function retornaPromise() {
-  try {
-    const result = await promise(param1, param2, param3);
-    console.log(result)
-  } catch(err) {
-    console.error(err)
-  }
-}
-
-retornaPromise()
+module.exports = promise;

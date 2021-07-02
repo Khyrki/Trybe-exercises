@@ -1,5 +1,7 @@
-const express = require('express')
-const getSimpsons = require('./service/requisicao');
+const express = require('express');
+
+const { writeNew } = require('./service/requisicao');
+const { getSimpsons } = require('./service/requisicao');
 
 const app = express();
 
@@ -22,6 +24,19 @@ app.get("/simpsons/:id", async (req, res, next) => {
   }
   res.status(200).json(filteredResponse);
 })
+
+app.post("/simpsons", async (req, res, next) => {
+  const userInput = req.body;
+  const simpsonApiResponse = await getSimpsons();
+  if(simpsonApiResponse.some((element) => userInput.id === element.id)) {
+    next({ error: "id already exists", code: 409  })
+  }
+  const writeNewResponse = await writeNew(userInput);
+  if(writeNewResponse) {
+    next(writeNewResponse)
+  }
+  res.status(204).end();
+});
 
 app.use((error, req, res, next) => {
   res.status(error.code).json({ "mensage": error.error })

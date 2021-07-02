@@ -7,7 +7,7 @@ const loginAuthMiddleware = (req, res, next) => {
   const passwordTest = passwordRegex.test(password);
 
   if(!emailTest || !passwordTest) {
-    return res.status(403).json({ code: 403, mesage: "Login ou senha inseridos com formato invalido" })
+    return res.status(403).json({ code: 400, mesage: "Login ou senha inseridos com formato invalido" })
   }
   next();
 };

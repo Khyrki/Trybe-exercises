@@ -12,4 +12,17 @@ const getSimpsons = async () => {
  }
 };
 
-module.exports = getSimpsons;
+const writeNew = async (newPersonagem) => {
+  try {
+    const originalSet = await getSimpsons();
+    await fs.writeFile("./simpsons.json", JSON.stringify([...originalSet, newPersonagem]));
+    return '';
+  } catch(error) {
+    return {
+      code : 500,
+      error: "errrrrrou!"
+    }
+  }
+}
+
+module.exports = { getSimpsons, writeNew };
