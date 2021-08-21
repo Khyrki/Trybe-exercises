@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leilao de centavos</title>
+  <link rel="stylesheet" href="./css/leilao.css">
+</head>
+<body>
+  <header>
+    <h1>Leilao de centavos</h1>
+    <h2>Dê seu lançe</h2>
+  </header>
+    <div class="itens-container">
+
+      <div class="item">
+        <p>Celulcar</p>
+        <img src='https://prints.ultracoloringpages.com/47b17e3b977a7416aca344b3f5e99bb3.png' width="100px" height="100px"></img>
+        <p>Valor atual: <span class="cellPrice">0</span></p>
+        <button
+          type="button"
+          class="bid-button"
+          name="cellPrice"
+        >
+          Dê um lance
+        </button>
+      </div>
+
+      <div class="item">
+        <p>TV</p>
+        <img src='https://prints.ultracoloringpages.com/3bab5b3549fbe9a1ba21cf06abb4c7ed.png' width="100px" height="100px"></img><br>
+        <p>Valor atual: <span class="tvPrice">0</span></p>
+        <button
+          type="button"
+          class="bid-button"
+          name="tvPrice"
+        >
+          Dê um lance
+        </button>
+      </div>
+
+      <div class="item">
+        <p>NoteBook</p>
+        <img src='https://prints.ultracoloringpages.com/35caf833846251e744776daa7ffc6369.png' width="100px" height="100px"></img><br>
+        <p>Valor atual: <span class="notebookPrice">0</span></p>
+        <button
+          type="button"
+          class="bid-button"
+          name="notebookPrice"
+        >
+        Dê um lance
+      </button>
+      </div>
+
+    </div>
+
+  <script src='/socket.io/socket.io.js'></script>
+  <script src='./js/client.js'></script>
+</body>
+</html>
